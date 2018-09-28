@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { DemoService } from './services/demo.service';
 
 @Component({
   // tslint:disable-next-line
@@ -7,9 +8,17 @@ import { Router, NavigationEnd } from '@angular/router';
   template: '<router-outlet></router-outlet>'
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router) { }
+  coins;
+  users: any;
+  constructor(
+    private router: Router,
+    private DemoService: DemoService,
+  ) { this.getUsers();}
+  
 
   ngOnInit() {
+    // this.coins = this.DemoService.getMyItems();
+      console.log(this.coins);
     this.router.events.subscribe((evt) => {
       if (!(evt instanceof NavigationEnd)) {
         return;
@@ -17,4 +26,13 @@ export class AppComponent implements OnInit {
       window.scrollTo(0, 0);
     });
   }
+
+  getUsers() {
+    // this.DemoService.getUser()
+    // .then(data => {
+    //   this.users = data;
+    //   console.log(this.users);
+    // });
+  }
+
 }

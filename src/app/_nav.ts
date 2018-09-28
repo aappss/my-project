@@ -27,6 +27,440 @@ export const navItems = [
     name: 'Components'
   },
   {
+    name: 'Settings',
+    url: '/settings',
+    icon: 'icon-settings',
+    children: [
+      {
+        name: 'Institution Details',
+        url: '/buttons/buttons',
+        // icon: 'icon-cursor'
+      },
+      {
+        name: 'Academic Details',
+        url: '/settings/academicDetails',
+        // icon: 'icon-cursor'
+      },
+      {
+        name: 'Student Import',
+        url: '/buttons/brand-buttons',
+        // icon: 'icon-cursor'
+      },
+      {
+        name: 'Employee Import',
+        url: '/buttons/brand-buttons',
+        // icon: 'icon-cursor'
+      },
+      {
+        name: 'Application List',
+        url: '/buttons/brand-buttons',
+        // icon: 'icon-cursor'
+      },
+      {
+        name: 'Employee Application',
+        url: '/buttons/brand-buttons',
+        // icon: 'icon-cursor'
+      }
+      // {
+      //   name: 'Student Import',
+      //   url: '/buttons/brand-buttons',
+      //   icon: 'icon-cursor'
+      // }
+    ]
+  },
+  {
+    name: 'Academic',
+    url: '/buttons',
+    icon: 'icon-people',
+    children: [
+      {
+        name: 'Cource & Batch',
+        url: '/buttons/buttons',
+        // icon: 'icon-cursor'
+      },
+      {
+        name: 'Subjects',
+        url: '/buttons/dropdowns',
+        // icon: 'icon-cursor'
+      },
+      {
+        name: 'Lesson Planing',
+        url: '/buttons/brand-buttons',
+        // icon: 'icon-cursor'
+      },
+      {
+        name: 'Time Table',
+        url: '/buttons/brand-buttons',
+        // icon: 'icon-cursor'
+      },
+      {
+        name: 'Exams',
+        url: '/buttons/brand-buttons',
+        // icon: 'icon-cursor'
+      },
+      {
+        name: 'Assignments & Notes',
+        url: '/buttons/brand-buttons',
+        // icon: 'icon-cursor'
+      },
+      {
+        name: 'Caricular',
+        url: '/buttons/brand-buttons',
+        // icon: 'icon-cursor'
+      }
+    ]
+  },
+  {
+    name: 'HR/Payroll',
+    url: '/buttons',
+    icon: 'icon-wallet',
+    children: [
+      {
+        name: 'Employee Management',
+        url: '/buttons',
+        // icon: 'icon-cursor', 
+        children: [
+          {
+            name: 'Add User Type',
+            url: '/buttons',
+            // icon: 'icon-cursor', 
+            
+          },
+          {
+            name: 'Add Employee',
+            url: '/buttons/dropdowns',
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Add Department',
+            url: '/buttons/brand-buttons',
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Add Designation',
+            url: '/buttons/brand-buttons',
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Employee List',
+            url: '/buttons/brand-buttons',
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Add Bank Details',
+            url: '/buttons/brand-buttons',
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Print List',
+            url: '/buttons/brand-buttons',
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Employee Attandence',
+            url: '/buttons/brand-buttons',
+            // icon: 'icon-cursor'
+          }
+        ]
+      },
+      {
+        name: 'Payroll',
+        url: '/buttons/dropdowns',
+        // icon: 'icon-cursor'
+        children: [
+          {
+            name: 'Pay Head',
+            url: '/buttons/buttons'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Payment Types',
+            url: '/buttons/dropdowns'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Salary Settings',
+            url: '/buttons/brand-buttons'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Employee Salary',
+            url: '/buttons/brand-buttons'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'generate Pay Slip',
+            url: '/buttons/brand-buttons'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Salary Statement',
+            url: '/buttons/brand-buttons'
+            // icon: 'icon-cursor'
+          }
+        ]
+      },
+      {
+        name: 'Leave Management',
+        url: '/buttons/brand-buttons',
+        // icon: 'icon-cursor'
+        children: [
+          {
+            name: 'Leave Category',
+            url: '/buttons/buttons'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Leave Details',
+            url: '/buttons/dropdowns'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Leave Application',
+            url: '/buttons/brand-buttons'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Leave Approvals',
+            url: '/buttons/brand-buttons'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'generate Pay Slip',
+            url: '/buttons/brand-buttons'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Salary Statement',
+            url: '/buttons/brand-buttons'
+            // icon: 'icon-cursor'
+          }
+        ]
+      },
+      {
+        name: 'Attendance',
+        url: '/buttons/brand-buttons',
+        // icon: 'icon-cursor'
+      }
+    ]
+  },
+  {
+    name: 'Students',
+    url: '/base',
+    icon: 'icon-user',
+    children: [
+      {
+        name: 'Student Category',
+        url: '/base/cards'
+      },
+      {
+        name: 'Students Addmission',
+        url: '/base/carousels'
+      },
+      {
+        name: 'Student List',
+        url: '/base/collapses'
+      },
+      {
+        name: 'Student Attandance',
+        url: '/base/forms'
+      },
+      {
+        name: 'Print List',
+        url: '/base/paginations'
+      },
+      {
+        name: 'Gardian List',
+        url: '/base/popovers'
+      },
+      {
+        name: 'Roll Number',
+        url: '/base/progress'
+      },
+      {
+        name: 'Student Attandance Import',
+        url: '/base/switches'
+      },
+      {
+        name: 'Student Gate Pass',
+        url: '/base/tables'
+      },
+      {
+        name: 'Student ID Card',
+        url: '/base/tabs'
+      }
+    ]
+  },
+  {
+    name: 'Finance',
+    url: '/buttons',
+    icon: 'icon-wallet',
+    children: [
+      {
+        name: 'Fees',
+        url: '/buttons',
+        // icon: 'icon-cursor', 
+        children: [
+          {
+            name: 'Fee Category',
+            url: '/buttons',
+            // icon: 'icon-cursor', 
+            
+          },
+          {
+            name: 'Fee Sub Category',
+            url: '/buttons/dropdowns',
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Fee Sub Category Fine',
+            url: '/buttons/brand-buttons',
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Fee Waiver',
+            url: '/buttons/brand-buttons',
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Fee Template',
+            url: '/buttons/brand-buttons',
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Fee Allocation',
+            url: '/buttons/brand-buttons',
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Fee Collection',
+            url: '/buttons/brand-buttons',
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Quick Payment',
+            url: '/buttons/brand-buttons',
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Reports',
+            url: '/buttons/brand-buttons',
+            // icon: 'icon-cursor'
+          }
+        ]
+      },
+      {
+        name: 'Accounting',
+        url: '/buttons/dropdowns',
+        // icon: 'icon-cursor'
+        children: [
+          {
+            name: 'Accounting Group',
+            url: '/buttons/buttons'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Voucher Master',
+            url: '/buttons/dropdowns'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Voucher Head',
+            url: '/buttons/brand-buttons'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Create Voucher',
+            url: '/buttons/brand-buttons'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Day Book',
+            url: '/buttons/brand-buttons'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Cash Book',
+            url: '/buttons/brand-buttons'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Bank Book',
+            url: '/buttons/brand-buttons'
+            // icon: 'icon-cursor'
+          },
+          {
+            name: 'Report',
+            url: '/buttons/brand-buttons'
+            // icon: 'icon-cursor'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Library',
+    url: '/base',
+    icon: 'icon-notebook',
+    children: [
+      {
+        name: 'Add Category',
+        url: '/base/cards'
+      },
+      {
+        name: 'Add Books',
+        url: '/base/carousels'
+      },
+      {
+        name: 'Issue Book',
+        url: '/base/collapses'
+      },
+      {
+        name: 'Request Details',
+        url: '/base/forms'
+      },
+      {
+        name: 'Book Return',
+        url: '/base/paginations'
+      },
+      {
+        name: 'Reports',
+        url: '/base/popovers'
+      }
+    ]
+  },
+  {
+    name: 'Transports',
+    url: '/base',
+    icon: 'icon-plane',
+    children: [
+      {
+        name: 'Add Vehicle',
+        url: '/base/cards'
+      },
+      {
+        name: 'Add Driver',
+        url: '/base/carousels'
+      },
+      {
+        name: 'Add Route',
+        url: '/base/collapses'
+      },
+      {
+        name: 'Add Destination',
+        url: '/base/forms'
+      },
+      {
+        name: 'Transport Allocation',
+        url: '/base/paginations'
+      },
+      {
+        name: 'Fee Collection',
+        url: '/base/popovers'
+      }
+    ]
+  },
+  {
     name: 'Base',
     url: '/base',
     icon: 'icon-puzzle',
@@ -214,18 +648,18 @@ export const navItems = [
         icon: 'icon-star'
       }
     ]
-  },
-  {
-    name: 'Download CoreUI',
-    url: 'http://coreui.io/angular/',
-    icon: 'icon-cloud-download',
-    class: 'mt-auto',
-    variant: 'success'
-  },
-  {
-    name: 'Try CoreUI PRO',
-    url: 'http://coreui.io/pro/angular/',
-    icon: 'icon-layers',
-    variant: 'danger'
   }
+  // {
+  //   name: 'Download CoreUI',
+  //   url: 'http://coreui.io/angular/',
+  //   icon: 'icon-cloud-download',
+  //   class: 'mt-auto',
+  //   variant: 'success'
+  // },
+  // {
+  //   name: 'Try CoreUI PRO',
+  //   url: 'http://coreui.io/pro/angular/',
+  //   icon: 'icon-layers',
+  //   variant: 'danger'
+  // }
 ];

@@ -6,6 +6,9 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
+import {HttpClientModule} from '@angular/common/http';
+import { MatTableModule } from '@angular/material';
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -19,6 +22,7 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { DemoService } from './services/demo.service';
 
 const APP_CONTAINERS = [
   DefaultLayoutComponent
@@ -40,6 +44,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -52,7 +57,9 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    HttpClientModule,
+    MatTableModule
   ],
   declarations: [
     AppComponent,
@@ -61,8 +68,11 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     P500Component,
     LoginComponent,
     RegisterComponent
+    
   ],
-  providers: [{
+  providers: [
+    DemoService,
+    {
     provide: LocationStrategy,
     useClass: HashLocationStrategy
   }],

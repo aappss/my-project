@@ -3,14 +3,14 @@
   "version": "2.0.0",
   "description": "CoreUI Free Angular 2+ Admin Template",
   "author": {
-    "name": "Łukasz Holeczek",
+    "name": "Abhishek",
     "url": "http://holeczek.pl",
     "github": "https://github.com/mrholek",
     "twitter": "https://twitter.com/lukaszholeczek"
   },
   "contributors": [
     {
-      "name": "Andrzej Kopański",
+      "name": "aappss",
       "url": "https://github.com/xidedix"
     }
   ],
@@ -27,12 +27,14 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^6.1.6",
+    "@angular/animations": "^6.1.9",
+    "@angular/cdk": "^6.4.7",
     "@angular/common": "^6.1.6",
     "@angular/compiler": "^6.1.6",
     "@angular/core": "^6.1.6",
     "@angular/forms": "^6.1.6",
     "@angular/http": "^6.1.6",
+    "@angular/material": "^6.4.7",
     "@angular/platform-browser": "^6.1.6",
     "@angular/platform-browser-dynamic": "^6.1.6",
     "@angular/router": "^6.1.6",

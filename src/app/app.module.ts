@@ -1,13 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { ReactiveFormsModule }    from '@angular/forms';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatTableModule } from '@angular/material';
+
+// used to create fake backend
+import { fakeBackendProvider } from './_helpers';
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -50,6 +55,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     BrowserModule,
     AppRoutingModule,
     AppAsideModule,
+    ReactiveFormsModule,
     AppBreadcrumbModule.forRoot(),
     AppFooterModule,
     AppHeaderModule,
@@ -72,10 +78,12 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
   ],
   providers: [
     DemoService,
-    {
-    provide: LocationStrategy,
-    useClass: HashLocationStrategy
-  }],
+    {provide: LocationStrategy,useClass: HashLocationStrategy},
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+        // provider used to create fake backend
+    fakeBackendProvider
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

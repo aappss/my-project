@@ -1,6 +1,9 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
+// const webpack = require('webpack');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = function (config) {
   config.set({
     basePath: '',
@@ -10,7 +13,19 @@ module.exports = function (config) {
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
-      require('@angular-devkit/build-angular/plugins/karma')
+      require('@angular-devkit/build-angular/plugins/karma'),
+
+      // new HtmlWebpackPlugin({
+      //   template: './src/index.html',
+      //   filename: 'index.html',
+      //   inject: 'body'
+      // }),
+      // new webpack.DefinePlugin({
+      //   // global app config object
+      //   config: JSON.stringify({
+      //     apiUrl: 'http://localhost:4200'
+      //   })
+      // })
     ],
     client:{
       clearContext: false // leave Jasmine Spec Runner output visible in browser

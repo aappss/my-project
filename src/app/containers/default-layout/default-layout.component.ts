@@ -1,16 +1,22 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { navItems } from './../../_nav';
+
+import { first } from 'rxjs/operators';
+
+import { User } from '../../_models';
+import { UserService } from '../../_services';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './default-layout.component.html'
 })
-export class DefaultLayoutComponent {
+export class DefaultLayoutComponent implements OnInit {
   public navItems = navItems;
   public sidebarMinimized = true;
   private changes: MutationObserver;
   public element: HTMLElement = document.body;
-  constructor() {
+  users: User[] = [];
+  constructor(private userService: UserService) {
 
     this.changes = new MutationObserver((mutations) => {
       this.sidebarMinimized = document.body.classList.contains('sidebar-minimized');
@@ -20,4 +26,9 @@ export class DefaultLayoutComponent {
       attributes: true
     });
   }
+  ngOnInit() {
+    this.userService.getAll().pipe(first()).subscribe(users => { 
+        this.users = users; 
+    });
+}
 }
